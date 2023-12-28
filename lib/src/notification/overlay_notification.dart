@@ -107,6 +107,7 @@ OverlaySupportEntry showSimpleNotification(
    * The direction in which the notification can be dismissed.
    */
   DismissDirection? slideDismissDirection,
+  void Function()? onTap,
 }) {
   final dismissDirection = slideDismissDirection ??
       (slideDismiss ? DismissDirection.horizontal : DismissDirection.none);
@@ -132,6 +133,7 @@ OverlaySupportEntry showSimpleNotification(
                   subtitle: subtitle,
                   trailing: trailing,
                   contentPadding: contentPadding,
+                  onTap: () => onTap,
                 ),
               )),
         ),
